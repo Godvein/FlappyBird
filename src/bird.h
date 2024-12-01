@@ -11,7 +11,7 @@ sf::Sprite sprite;
 public:
 Bird();
 void initialize();
-void update();
-void flap();
+void update(float delta_time);
+void flap(float delta_time, bool& space_pressed);
 void draw(sf::RenderWindow& window);
 };
