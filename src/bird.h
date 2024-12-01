@@ -11,7 +11,7 @@ sf::Sprite sprite;
 public:
 Bird();
 void initialize();
-void update(float delta_time);
+bool update(float delta_time, sf::RectangleShape ground);
 void flap(float delta_time, bool& space_pressed);
 void draw(sf::RenderWindow& window);
 };
