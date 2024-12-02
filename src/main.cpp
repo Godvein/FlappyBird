@@ -1,7 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "bird.h"
 #include "background.h"
-
 bool game_over = false;
 
 int main(){
@@ -67,7 +66,7 @@ window.draw(gameOverText);
 window.display();  
 continue;  
 }
-
+//if not game over
 float delta_time = clock.restart().asMicroseconds()/1000;
 
 if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Space){
