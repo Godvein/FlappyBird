@@ -10,7 +10,7 @@ Flappy Bird is a simple yet challenging game where the player controls a bird th
 ## How to Download and Play
 
 1. **Download the Release**:
-   - Navigate to the [Releases page](https://github.com/your-username/your-repository/releases](https://github.com/Godvein/FlappyBird/releases/tag/v1.0) of this project.
+   - Navigate to the [Releases page](https://github.com/Godvein/FlappyBird/releases/tag/v1.0) of this project.
    - Download the latest release `.zip` file from the **Assets** section.
 
 2. **Extract the ZIP File**:
