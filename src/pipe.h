@@ -5,6 +5,7 @@ class Pipe{
 private:
 
 sf::Texture texture;
+public:
 sf::Sprite sprite;
 
 public:

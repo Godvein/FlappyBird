@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "bird.h"
 #include "background.h"
+#include "pipemanager.h"
 bool game_over = false;
 
 int main(){
@@ -16,6 +17,10 @@ bool space_pressed = false;
 
 //Clock
 sf::Clock clock;
+
+//pipemanager
+PipeManager pipemanager;
+pipemanager.initialize();
 
 //background
 BackGround background;
@@ -45,6 +50,7 @@ if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Enter
 game_over = false;
 bird.initialize();
 background.initialize();
+pipemanager.initialize();
 }
 }
 //gameloop
@@ -52,6 +58,7 @@ if (game_over) {
 window.clear(sf::Color::Black); 
 background.draw(window); 
 bird.draw(window);
+pipemanager.draw(window);
 
 sf::Font font;
 font.loadFromFile("../assets/ARIAL.TTF"); 
@@ -74,11 +81,13 @@ space_pressed = false;
 }
 
 game_over = bird.update(delta_time, ground);
+pipemanager.update(delta_time);
 if(space_pressed == false){
 bird.flap(delta_time, space_pressed);
 }
 window.clear(sf::Color::Black);
 background.draw(window);
+pipemanager.draw(window);
 bird.draw(window);
 window.draw(ground);
 window.display();

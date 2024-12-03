@@ -1,11 +1,11 @@
 #include "pipe.h"
-#include "cstdlib"
+#include <cstdlib>
+#include <iostream>
 void Pipe::initializeUp(){
 
 if(texture.loadFromFile("../assets/uppipe.png")){
 
 sprite.setTexture(texture);
-
 }
 
 sprite.setPosition(sf::Vector2f(1000,0));
@@ -17,9 +17,11 @@ if(texture.loadFromFile("../assets/downpipe.png")){
 
 sprite.setTexture(texture);
 
+}
 sprite.setPosition(sf::Vector2f(1000,480));
 
-}
+
+
 }
 
 void Pipe::update(){
