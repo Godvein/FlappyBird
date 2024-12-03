@@ -2,6 +2,7 @@
 #include "bird.h"
 #include "background.h"
 #include "pipemanager.h"
+#include <math.h>
 bool game_over = false;
 
 int main(){
@@ -14,6 +15,17 @@ window.setFramerateLimit(144);
 
 bool space_pressed = false;
 //initialize GameObjects
+
+//score
+float float_score = 0;
+int score = std::ceil(float_score);
+sf::Text scoreText;
+sf::Font scoreFont;
+if(scoreFont.loadFromFile("../assets/ARIAL.TTF")){
+scoreText.setFont(scoreFont);
+}
+
+scoreText.setString("score: " + std::to_string(score));
 
 //Clock
 sf::Clock clock;
@@ -48,6 +60,8 @@ window.close();
 if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Enter && game_over) {
 
 game_over = false;
+float_score = 0;
+scoreText.setString("score :" + std::to_string(score));
 bird.initialize();
 background.initialize();
 pipemanager.initialize();
@@ -58,7 +72,7 @@ if (game_over) {
 window.clear(sf::Color::Black); 
 background.draw(window); 
 bird.draw(window);
-pipemanager.draw(window);
+window.draw(scoreText);
 
 sf::Font font;
 font.loadFromFile("../assets/ARIAL.TTF"); 
@@ -74,14 +88,20 @@ window.display();
 continue;  
 }
 //if not game over
+
+int score = std::ceil(float_score);
+
+scoreText.setString("score :" + std::to_string(score));
 float delta_time = clock.restart().asMicroseconds()/1000;
 
 if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Space){
 space_pressed = false;
 }
 
-game_over = bird.update(delta_time, ground);
-pipemanager.update(delta_time);
+bool condition1 = bird.update(delta_time, ground);
+bool condition2 = pipemanager.update(delta_time, bird, float_score);
+
+game_over = condition1 || condition2;
 if(space_pressed == false){
 bird.flap(delta_time, space_pressed);
 }
@@ -90,6 +110,7 @@ background.draw(window);
 pipemanager.draw(window);
 bird.draw(window);
 window.draw(ground);
+window.draw(scoreText);
 window.display();
 }
 

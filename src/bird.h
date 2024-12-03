@@ -6,6 +6,8 @@ private:
 float jump_velocity;
 float gravity_speed;
 sf::Texture texture;
+
+public:
 sf::Sprite sprite;
 
 public:

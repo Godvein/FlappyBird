@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <memory>
+#include "bird.h"
 class PipeManager{
 
 private:
@@ -13,7 +14,7 @@ float timer;
 public:
 
 void initialize();
-void update(float delta_time);
+bool update(float delta_time, Bird bird, float& score);
 void draw(sf::RenderWindow& window);
 
 };
