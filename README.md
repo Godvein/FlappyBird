@@ -12,7 +12,7 @@ Flappy Bird is a simple yet challenging game where the player controls a bird th
 1. **Download the Release**:
    - Navigate to the [Releases page](https://github.com/Godvein/FlappyBird/releases/tag/v1.0) of this project.
    - Download the latest release `.zip` file from the **Assets** section.
-2. **Install SFML library
+2. **Install SFML library**:
    -[SFML for linux](https://www.sfml-dev.org/tutorials/2.6/start-linux.php)  
 3. **Extract the ZIP File**:
    - After downloading the `.zip` file, extract it to a folder of your choice on your computer.
