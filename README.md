@@ -7,19 +7,20 @@ A clone of the classic **Flappy Bird** game, developed using **C++** and **SFML*
 ## **About the Project**
 Flappy Bird is a simple yet challenging game where the player controls a bird that flaps its wings to navigate through a series of obstacles (pipes). The objective is to pass through as many pipes as possible without colliding with them or the ground.
 
-## How to Download and Play
+## How to Download and Play(linux)
 
 1. **Download the Release**:
    - Navigate to the [Releases page](https://github.com/Godvein/FlappyBird/releases/tag/v1.0) of this project.
    - Download the latest release `.zip` file from the **Assets** section.
-
-2. **Extract the ZIP File**:
+2. **Install SFML library
+   -[SFML for linux](https://www.sfml-dev.org/tutorials/2.6/start-linux.php)  
+3. **Extract the ZIP File**:
    - After downloading the `.zip` file, extract it to a folder of your choice on your computer.
 
-3. **Navigate to the Build Folder**:
+4. **Navigate to the Build Folder**:
    - Inside the extracted folder, open the `Flappybird/build` directory.
 
-4. **Run the Game**:
+5. **Run the Game**:
    - In the `build` folder, you should see the `flappybird.exe` file. Double-click on it to run the game.
    - Enjoy playing Flappy Bird!
 ### **Project Structure**
