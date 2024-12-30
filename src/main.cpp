@@ -11,6 +11,10 @@ int main(){
 const int window_width = 1000;
 const int window_height = 800;
 sf::RenderWindow window(sf::VideoMode(window_width, window_height), "Flappy Bird");
+sf::View view(sf::FloatRect(0, 0, window_width, window_height));
+window.setView(view);
+
+
 window.setFramerateLimit(144);
 
 bool space_pressed = false;
@@ -67,6 +71,10 @@ background.initialize();
 pipemanager.initialize();
 }
 }
+// Update the view based on the current window size
+sf::Vector2u windowSize = window.getSize();
+sf::View view(sf::FloatRect(0, 0, windowSize.x, windowSize.y));
+window.setView(view);
 //gameloop
 if (game_over) {
 window.clear(sf::Color::Black); 
