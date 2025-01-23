@@ -3,6 +3,13 @@
 A clone of the classic **Flappy Bird** game, developed using **C++** and **SFML**. This project demonstrates fundamental game development concepts, including physics simulation, input handling, collision detection, and basic game loop mechanics.
 
 ---
+## Demo Video
+
+Watch a short demo of my project in action:
+
+https://github.com/user-attachments/assets/e0ae47ae-0bca-401c-8db2-748f91d623f7
+
+
 
 ## **About the Project**
 Flappy Bird is a simple yet challenging game where the player controls a bird that flaps its wings to navigate through a series of obstacles (pipes). The objective is to pass through as many pipes as possible without colliding with them or the ground.
